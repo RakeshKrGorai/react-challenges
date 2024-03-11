@@ -13,7 +13,7 @@ img {
   border-radius: 20px;
   color: black;
   width: 467px;
-  height: 720px;
+  height: 790px;
 }
 
 .data {
@@ -24,7 +24,7 @@ img {
 
 .list {
   font-family: "Inria Sans", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -34,8 +34,9 @@ img {
 }
 
 .skill {
+  display: flex;
   border-radius: 10px;
-  padding: 2px 12px;
+  padding: 2px 1px;
 }
 
 .header {

@@ -1,5 +1,6 @@
 import Profile from "./assets/avatar.jpg";
 import "./App.css";
+import Qualities from "./qualities";
 
 function Avatar() {
   return (
@@ -9,10 +10,14 @@ function Avatar() {
   );
 }
 
-function Skills(props) {
+function Skills({ qualityObj }) {
+  const style = { backgroundColor: qualityObj.color };
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.skill}</span>
+    <div className="skill" style={style}>
+      <li className="list">
+        {qualityObj.name}
+        {qualityObj.difficulty}
+      </li>
     </div>
   );
 }
@@ -43,14 +48,14 @@ function Header() {
 
 function List() {
   return (
-    <div className="list">
-      <Skills skill="devil-fruit-user" color="red" />
-      <Skills skill="yonko" color="yellow" />
-      <Skills skill="kaizoku" color="green" />
-      <Skills skill="baka" color="cyan" />
-    </div>
+    <ul className="list">
+      {Qualities.map((quality) => (
+        <Skills qualityObj={quality} key={quality.name} />
+      ))}
+    </ul>
   );
 }
+
 function App() {
   return (
     <div className="container">
