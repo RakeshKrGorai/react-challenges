@@ -1,0 +1,19 @@
+button {
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: auto;
+  border-radius: 100px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+.counter {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
